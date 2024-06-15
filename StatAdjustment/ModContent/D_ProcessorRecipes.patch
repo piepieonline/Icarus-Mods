@@ -35,13 +35,7 @@
 				{
                     "op": "replace",
                     "pointer": "@",
-                    "query": "$.Rows[?(@.Name == 'Steel_Bloom')].Inputs[?(@.Element.RowName == 'Metal_Ore')].Count",
-                    "value": 2
-                },
-				{
-                    "op": "replace",
-                    "pointer": "@",
-                    "query": "$.Rows[?(@.Name == 'Steel_Bloom2')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
+                    "query": "$.Rows[?(@.Name =~ /Steel_Bloom\\d?/)].Inputs[?(@.Element.RowName =~ /Metal/)].Count",
                     "value": 2
                 },
 				{
