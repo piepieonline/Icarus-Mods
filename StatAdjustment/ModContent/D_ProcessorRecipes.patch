@@ -1,0 +1,65 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Iron_Nail')].Outputs[?(@.Element.RowName == 'Iron_Nail')].Count",
+                    "value": 20
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Copper_Nail')].Outputs[?(@.Element.RowName == 'Copper_Nail')].Count",
+                    "value": 20
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Refined_Metal')].Inputs[?(@.Element.RowName == 'Metal_Ore')].Count",
+                    "value": 1
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Refined_Copper')].Inputs[?(@.Element.RowName == 'Copper_Ore')].Count",
+                    "value": 1
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Refined_Gold')].Inputs[?(@.Element.RowName == 'Gold_Ore')].Count",
+                    "value": 1
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Steel_Bloom')].Inputs[?(@.Element.RowName == 'Metal_Ore')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Steel_Bloom2')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Platinum_Ingot')].Inputs[?(@.Element.RowName == 'Platinum_Ore')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Wall_Torch')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
+                    "value": 1
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Crafting/D_ProcessorRecipes.json",
+    "type": "Json"
+}

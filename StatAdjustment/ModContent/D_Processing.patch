@@ -1,0 +1,17 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "remove",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.bRequiresShelter == true)].bRequiresShelter",
+                    "value": 20
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Traits/D_Processing.json",
+    "type": "Json"
+}

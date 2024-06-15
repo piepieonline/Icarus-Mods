@@ -1,0 +1,31 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "add",
+                    "path": "/Rows/0/StatsGranted/(Value=\"BaseSharedExperience_+%\")",
+                    "value": 900
+                },
+                {
+                    "op": "replace",
+                    "path": "/Rows/0/StatsGranted/(Value=\"BaseMovementSpeed_+\")",
+                    "value": 270
+                },
+                {
+                    "op": "add",
+                    "path": "/Rows/0/StatsGranted/(Value=\"BaseExperience_+%\")",
+                    "value": -50
+                },
+                {
+                    "op": "add",
+                    "path": "/Rows/0/StatsGranted/(Value=\"BaseCraftingSpeed_+%\")",
+                    "value": 100
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Stats/D_CharacterStartingStats.json",
+    "type": "Json"
+}

@@ -1,0 +1,35 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "remove",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'Easy_Creatures')].WorldStats['(Value=\"WorldNPCMaximumHealth_+%\")']",
+                    "value": 0
+                },
+                {
+                    "op": "remove",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'NPC_Increase_Easy')].WorldStats['(Value=\"WorldNPCMaximumHealth_+%\")']",
+                    "value": 0
+                },
+                {
+                    "op": "remove",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'NPC_Increase_Medium')].WorldStats['(Value=\"WorldNPCMaximumHealth_+%\")']",
+                    "value": 0
+                },
+                {
+                    "op": "remove",
+                    "pointer": "@",
+                    "query": "$.Rows[?(@.Name == 'NPC_Increase_Hard')].WorldStats['(Value=\"WorldNPCMaximumHealth_+%\")']",
+                    "value": 0
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Stats/D_ProspectStats.json",
+    "type": "Json"
+}

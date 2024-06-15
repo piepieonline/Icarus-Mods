@@ -1,0 +1,17 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "add",
+                    "pointer": "@/SharedExperience",
+                    "query": "$.Rows[?(@.Name =~ /Skin/)]",
+                    "value": true
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Experience/D_ExperienceEvents.json",
+    "type": "Json"
+}
