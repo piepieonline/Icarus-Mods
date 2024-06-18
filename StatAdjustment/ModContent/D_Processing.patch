@@ -4,9 +4,7 @@
             [
                 {
                     "op": "remove",
-                    "pointer": "@",
-                    "query": "$.Rows[?(@.bRequiresShelter == true)].bRequiresShelter",
-                    "value": 20
+                    "query": "$.Rows[?(@.bRequiresShelter == true)].bRequiresShelter"
                 }
             ]
         ]

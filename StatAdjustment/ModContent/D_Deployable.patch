@@ -1,0 +1,17 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "add",
+                    "pointer": "@/EffectedByWeather",
+                    "query": "$.Rows[?(@.Name == 'Cement_Mixer')]",
+                    "value": false
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Traits/D_Deployable.json",
+    "type": "Json"
+}

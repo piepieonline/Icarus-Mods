@@ -3,50 +3,51 @@
         "patches": [
             [
                 {
+                    "comment": "Halves steel costs for all recipes",
                     "op": "replace",
-                    "pointer": "@",
+                    "query": "$..Inputs[?(@.Element.RowName == 'Steel_Ingot')].Count",
+                    "valueCalculation": {
+                        "operation": "divide",
+                        "operand": 2
+                    }
+                },
+                {
+                    "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Iron_Nail')].Outputs[?(@.Element.RowName == 'Iron_Nail')].Count",
                     "value": 20
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Copper_Nail')].Outputs[?(@.Element.RowName == 'Copper_Nail')].Count",
                     "value": 20
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Refined_Metal')].Inputs[?(@.Element.RowName == 'Metal_Ore')].Count",
                     "value": 1
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Refined_Copper')].Inputs[?(@.Element.RowName == 'Copper_Ore')].Count",
                     "value": 1
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Refined_Gold')].Inputs[?(@.Element.RowName == 'Gold_Ore')].Count",
                     "value": 1
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name =~ /Steel_Bloom\\d?/)].Inputs[?(@.Element.RowName =~ /Metal/)].Count",
                     "value": 2
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Platinum_Ingot')].Inputs[?(@.Element.RowName == 'Platinum_Ore')].Count",
                     "value": 2
                 },
 				{
                     "op": "replace",
-                    "pointer": "@",
                     "query": "$.Rows[?(@.Name == 'Wall_Torch')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
                     "value": 1
                 }

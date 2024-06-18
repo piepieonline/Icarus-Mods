@@ -1,0 +1,16 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name =~ /Seed_GrowthSpeed/)].GrantedStats['(Value=\"BasePlantedCropGrowthSpeed_+%\")']",
+                    "value": 20
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Modifiers/D_ModifierStates.json",
+    "type": "Json"
+}
