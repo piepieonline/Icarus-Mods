@@ -1,0 +1,19 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "add",
+                    "pointer": "/Rows/-",
+                    "value": {
+                        "Name": "Decay_30_Minutes",
+                        "DecayTime": 1800
+                    }
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Traits/D_Decayable.json",
+    "type": "Json"
+}

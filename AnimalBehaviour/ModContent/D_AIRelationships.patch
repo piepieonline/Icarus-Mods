@@ -1,0 +1,60 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "add",
+                    "pointer": "@/-",
+                    "query": "$.Rows[?(@.Name == 'DefaultLargeCarnivore')].HostileRelationships",
+                    "value": {
+						"DataTableName": "D_AIRelationships",
+						"RowName": "DefaultMediumHerbivore"
+					}
+                },
+                {
+                    "op": "add",
+                    "pointer": "@/-",
+                    "query": "$.Rows[?(@.Name == 'DefaultLargeCarnivore')].HostileRelationships",
+                    "value": {
+						"DataTableName": "D_AIRelationships",
+						"RowName": "DefaultSmallHerbivore"
+					}
+                },
+                {
+                    "op": "add",
+                    "pointer": "@/-",
+                    "query": "$.Rows[?(@.Name == 'DefaultMediumCarnivore')].HostileRelationships",
+                    "value": {
+						"DataTableName": "D_AIRelationships",
+						"RowName": "DefaultMediumHerbivore"
+					}
+                },
+                {
+                    "op": "add",
+                    "pointer": "@/-",
+                    "query": "$.Rows[?(@.Name == 'DefaultMediumCarnivore')].HostileRelationships",
+                    "value": {
+						"DataTableName": "D_AIRelationships",
+						"RowName": "DefaultSmallHerbivore"
+					}
+                },
+                {
+                    "op": "remove",
+                    "query": "$.Rows[?(@.Name == 'DefaultMediumCarnivore')].FriendlyRelationships[?(@.RowName =~ /Herbivore/)]"
+                },
+                {
+                    "op": "add",
+                    "pointer": "@/-",
+                    "query": "$.Rows[?(@.Name == 'DefaultSmallCarnivore')].HostileRelationships",
+                    "value": {
+						"DataTableName": "D_AIRelationships",
+						"RowName": "DefaultSmallHerbivore"
+					}
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "AI/D_AIRelationships.json",
+    "type": "Json"
+}

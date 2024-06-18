@@ -1,0 +1,16 @@
+{
+    "data": {
+        "patches": [
+            [
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name =~ /AnimalCarcass_/)].Decayable.RowName",
+                    "value": "Decay_30_Minutes"
+                }
+            ]
+        ]
+    },
+    "schema_version": 1,
+    "target": "Items/D_ItemsStatic.json",
+    "type": "Json"
+}
