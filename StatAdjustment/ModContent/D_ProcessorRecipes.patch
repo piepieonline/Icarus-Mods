@@ -12,6 +12,24 @@
                     }
                 },
                 {
+                    "comment": "Halves electronics costs for all recipes",
+                    "op": "replace",
+                    "query": "$..Inputs[?(@.Element.RowName == 'Electronics')].Count",
+                    "valueCalculation": {
+                        "operation": "divide",
+                        "operand": 2
+                    }
+                },
+                {
+                    "comment": "Halves spline tool costs in half",
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name =~ /SplineTool_/)].Inputs..Count",
+                    "valueCalculation": {
+                        "operation": "divide",
+                        "operand": 2
+                    }
+                },
+                {
                     "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Iron_Nail')].Outputs[?(@.Element.RowName == 'Iron_Nail')].Count",
                     "value": 20
@@ -48,8 +66,38 @@
                 },
 				{
                     "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Titanium_Ingot')].Inputs[?(@.Element.RowName == 'Titanium_Ore')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Wall_Torch')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
                     "value": 1
+                },
+				{
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Concrete_Mix')].Outputs[?(@.Element.RowName == 'Concrete_Mix')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Electronics')].Outputs[?(@.Element.RowName == 'Electronics')].Count",
+                    "value": 2
+                },
+				{
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Hunting_Rifle')].Inputs[?(@.Element.RowName == 'Titanium_Ingot')].Count",
+                    "value": 20
+                },
+				{
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Electric_Furnace')].Inputs[?(@.Element.RowName == 'Concrete_Mix')].Count",
+                    "value": 40
+                },
+				{
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Jerrycan')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
+                    "value": 10
                 }
             ]
         ]
