@@ -46,28 +46,68 @@
                 },
 				{
                     "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Refined_Metal')].RequiredMillijoules",
+                    "value": 6750
+                },
+				{
+                    "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Refined_Copper')].Inputs[?(@.Element.RowName == 'Copper_Ore')].Count",
                     "value": 1
+                },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Refined_Copper')].RequiredMillijoules",
+                    "value": 6750
                 },
 				{
                     "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Refined_Gold')].Inputs[?(@.Element.RowName == 'Gold_Ore')].Count",
                     "value": 1
                 },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Refined_Gold')].RequiredMillijoules",
+                    "value": 6750
+                },
 				{
                     "op": "replace",
                     "query": "$.Rows[?(@.Name =~ /Steel_Bloom\\d?/)].Inputs[?(@.Element.RowName =~ /Metal/)].Count",
                     "value": 2
+                },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Steel_Ingot')].RequiredMillijoules",
+                    "value": 7500
                 },
 				{
                     "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Platinum_Ingot')].Inputs[?(@.Element.RowName == 'Platinum_Ore')].Count",
                     "value": 2
                 },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Platinum_Ingot')].RequiredMillijoules",
+                    "value": 50000
+                },
 				{
                     "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Titanium_Ingot')].Inputs[?(@.Element.RowName == 'Titanium_Ore')].Count",
                     "value": 2
+                },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Titanium_Ingot')].RequiredMillijoules",
+                    "value": 50000
+                },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Glass')].RequiredMillijoules",
+                    "value": 6750
+                },
+                {
+                    "op": "replace",
+                    "query": "$.Rows[?(@.Name == 'Carbon_Fiber')].RequiredMillijoules",
+                    "value": 6750
                 },
 				{
                     "op": "replace",
@@ -98,7 +138,17 @@
                     "op": "replace",
                     "query": "$.Rows[?(@.Name == 'Jerrycan')].Inputs[?(@.Element.RowName == 'Refined_Metal')].Count",
                     "value": 10
-                }
+                },
+                {
+                    "op": "add",
+                    "query": "$.Rows[?(@.Name == 'Wall_Torch')].RecipeSets",
+                    "pointer": "@/-",
+                    "value": {
+                        "DataTableName": "D_RecipeSets",
+                        "RowName": "Character"
+                    }
+                },
+
             ]
         ]
     },
